@@ -11,6 +11,8 @@ test_cases = yaml.load(open('tests.yaml')).get('test-cases')
 node_total = int(os.environ.get('CIRCLE_NODE_TOTAL'))
 node_index = int(os.environ.get('CIRCLE_NODE_INDEX'))
 
+print 'node total is {}, node index is {}'.format(node_total, node_index)
+
 tests_to_run = []
 
 for case in test_cases:
